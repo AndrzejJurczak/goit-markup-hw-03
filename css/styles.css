@@ -38,8 +38,10 @@ header {
 
 .container {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: 0;
+  padding: 0;
 }
 .section {
   padding-top: 94px;
@@ -47,9 +49,7 @@ header {
   margin: 0 auto;
   text-align: center;
 }
-.top {
-  display: flex;
-}
+
 .hero {
   background-color: var(--background-header-color);
   color: var(--secondary-text-color);
@@ -64,6 +64,8 @@ header {
   background-color: var(--background-footer-color);
   text-decoration-line: none;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .what-we-do-title {
@@ -75,6 +77,58 @@ header {
   list-style: none;
 }
 /*end body style*/
+
+.top {
+  display: flex;
+}
+.sterowanie {
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation {
+}
+.navigation-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 46px;
+}
+.navigation-item {
+  display: flex;
+  justify-content: center;
+}
+.navigation-link {
+  display: flex;
+  justify-content: stretch;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+.navigation-contact-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.navigation-contact-item {
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation-contact-link {
+  display: flex;
+  justify-content: flex-end;
+
+  font-weight: 500;
+  line-height: 1.17;
+  color: var(--third-text-color);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
 
 .main-button {
   font-weight: 700;
@@ -119,45 +173,6 @@ header {
   cursor: pointer;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.navigation-list,
-.navigation-contact-list {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  flex-grow: 2;
-}
-.navigation-item {
-  display: flex;
-  justify-content: center;
-  gap: 46px;
-}
-.navigation-contact-item {
-  gap: 50px;
-}
-.navigation-link {
-  display: flex;
-  font-weight: 500;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
-  text-decoration: none;
-}
-.navigation-contact-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  font-weight: 500;
-  line-height: 1.17;
-  color: var(--third-text-color);
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
 .bottom-contact {
   line-height: 1.71;
 }
@@ -210,9 +225,9 @@ header {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  padding-top: 24px;
-  margin-right: 94px;
-  margin-bottom: 200px;
+  padding-top: 60px;
+  /*margin-right: 94px;
+  margin-bottom: 200px;*/
 }
 
 .studio-name-web {
@@ -266,6 +281,9 @@ header {
 .our-strengths-list {
   display: flex;
   gap: 30px;
+  text-align: left;
+  justify-content: center;
+  padding-left: 0;
 }
 .our-strenghts-title {
   font-weight: 700;
@@ -277,6 +295,7 @@ header {
   color: var(--third-text-color);
   padding-top: 10px;
   flex-wrap: nowrap;
+  width: 270px;
 }
 .what-we-do-title {
   font-weight: 700;
@@ -290,6 +309,9 @@ header {
   justify-content: center;
   padding-left: 0px;
   gap: 30px;
+}
+.our-customers {
+  padding-left: 0;
 }
 .our-customer-item {
   border: 1px solid #eee;
