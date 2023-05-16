@@ -20,7 +20,6 @@
   --background-section-color: #fff;
   --background-section-second-color: #f5f4fa;
   --footer-text-color: rgba(255, 255, 255, 0.6);
-  --list-style: none;
 }
 /* end global variables */
 
@@ -32,7 +31,9 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   width: 1600px;
-  justify-content: center;
+}
+header {
+  border-bottom: 1px solid var(--line-color);
 }
 
 .container {
@@ -43,11 +44,11 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin: 0 auto;
+  text-align: center;
 }
 .top {
-  border-bottom: 1px solid var(--line-color);
   display: flex;
-  justify-content: space-between;
 }
 .hero {
   background-color: var(--background-header-color);
@@ -71,7 +72,7 @@ body {
   line-height: 1.17;
 }
 .list {
-  list-style: var(--list-style);
+  list-style: none;
 }
 /*end body style*/
 
@@ -86,6 +87,7 @@ body {
   letter-spacing: 0.06em;
   border: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
+  margin-bottom: 200px;
 }
 
 .button-menu:hover,
@@ -96,6 +98,7 @@ body {
   display: flex;
   gap: 10px;
   justify-content: center;
+  padding-bottom: 50px;
 }
 .button-portfolio-item {
   font-weight: 500;
@@ -107,6 +110,7 @@ body {
   cursor: pointer;
   border: #fff;
   border-radius: 4px;
+  padding: 6px 22px;
 }
 .button-portfolio-item:hover,
 .button-portfolio-item:focus {
@@ -115,33 +119,47 @@ body {
   cursor: pointer;
 }
 
-/* links */
-.nav-menu-list {
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  flex-grow: 2;
+}
+.navigation-list,
+.navigation-contact-list {
+  display: flex;
+}
+.navigation-item {
   display: flex;
   justify-content: center;
   gap: 46px;
 }
-.contact-menu-list {
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-}
-.nav-menu-link {
+.navigation-link {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   text-decoration: none;
+  display: flex;
 }
-.contact-menu-link {
+.navigation-contact-link {
   font-weight: 500;
   line-height: 1.17;
   color: var(--third-text-color);
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
 }
 .bottom-contact {
   line-height: 1.71;
+}
+.address {
+  padding-top: 20px;
 }
 .bottom-contact-address {
   line-height: 1.71;
@@ -156,10 +174,10 @@ body {
   text-decoration: inherit;
   font-style: normal;
 }
-.nav-menu-link:hover,
-.nav-menu-link:focus,
-.contact-menu-link:hover,
-.contact-menu-link:focus,
+.navigation-link:hover,
+.navigation-link:focus,
+.navigation-contact-link:hover,
+.navigation-contact-link:focus,
 .bottom-contact-address:hover,
 .bottom-contact-address:focus,
 .bottom-contact-link:hover,
@@ -170,7 +188,18 @@ body {
 /*end links*/
 
 /*studio-name - > color of name Studio Web */
-.studio-name-top,
+.studio-name-top {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 26px;
+  line-height: 1.17;
+  text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 94px;
+  margin-bottom: 20px;
+}
 .studio-name-bottom {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -178,6 +207,9 @@ body {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
+  padding-top: 24px;
+  margin-right: 94px;
+  margin-bottom: 200px;
 }
 
 .studio-name-web {
@@ -207,6 +239,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  padding-bottom: 50px;
 }
 .team-name-item {
   background-color: var(--background-container-color);
@@ -229,6 +262,7 @@ body {
 
 .our-strengths-list {
   display: flex;
+  gap: 30px;
 }
 .our-strenghts-title {
   font-weight: 700;
@@ -238,12 +272,15 @@ body {
 .our-strenghts-description {
   line-height: 1.71;
   color: var(--third-text-color);
+  padding-top: 10px;
+  flex-wrap: nowrap;
 }
 .what-we-do-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  padding-bottom: 50px;
 }
 .what-we-do-list {
   display: flex;
@@ -251,10 +288,10 @@ body {
   padding-left: 0px;
   gap: 30px;
 }
-.our-customers {
+.our-customer-item {
+  border: 1px solid #eee;
 }
 .our-customers-list {
-  border-bottom: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -265,9 +302,13 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: left;
+  padding: 0 24px 4px 24px;
 }
 .client-service {
   font-size: 16px;
   line-height: 1.87;
   color: var(--third-text-color);
+  text-align: left;
+  padding: 0 24px 0 24px;
 }
