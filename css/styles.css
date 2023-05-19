@@ -30,28 +30,57 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  width: 1600px;
 }
-header {
-  border-bottom: 1px solid var(--line-color);
-}
-
-.container {
-  max-width: 1200px;
-  /*margin-left: auto;
-  margin-right: auto;*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.container {
+  width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 15px;
+}
+
+header {
+  border-bottom: 1px solid var(--line-color);
 }
 
 .hero {
   background-color: var(--background-header-color);
+  align-items: center;
+  height: 600px;
+  padding-top: 200px;
+}
+.main-title {
   color: var(--secondary-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -59,13 +88,8 @@ header {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
-}
-.bottom {
-  background-color: var(--background-footer-color);
-  text-decoration-line: none;
-  font-style: normal;
-  display: flex;
-  flex-direction: column;
+  max-width: 696px;
+  margin: 0 auto;
 }
 
 .what-we-do-title {
@@ -75,33 +99,22 @@ header {
 }
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /*end body style*/
 
 .top {
   display: flex;
-}
-.sterowanie {
-  display: flex;
-  justify-content: flex-end;
-}
-.navigation {
+  align-items: center;
 }
 .navigation-list {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 32px;
   gap: 46px;
 }
-.navigation-item {
-  display: flex;
-  justify-content: center;
-}
 .navigation-link {
-  display: flex;
-  justify-content: stretch;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -110,38 +123,37 @@ header {
 }
 .navigation-contact-list {
   display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
   gap: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.navigation-contact-item {
-  display: flex;
-  justify-content: flex-end;
-}
 .navigation-contact-link {
-  display: flex;
-  justify-content: flex-end;
-
   font-weight: 500;
   line-height: 1.17;
   color: var(--third-text-color);
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-
+.current {
+  color: var(--button-color);
+}
 .main-button {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.36;
   color: var(--secondary-text-color);
   background-color: var(--button-color);
-  width: 250px;
+  width: 200px;
   height: 50px;
   letter-spacing: 0.06em;
   border: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-bottom: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .button-menu:hover,
@@ -155,6 +167,7 @@ header {
   padding-bottom: 50px;
 }
 .button-portfolio-item {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -170,7 +183,6 @@ header {
 .button-portfolio-item:focus {
   color: var(--secondary-text-color);
   background-color: var(--button-color);
-  cursor: pointer;
 }
 
 .bottom-contact {
@@ -213,10 +225,7 @@ header {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  padding-top: 24px;
-  padding-bottom: 25px;
   margin-right: 94px;
-  margin-bottom: 20px;
 }
 .studio-name-bottom {
   font-family: "Raleway", sans-serif;
@@ -226,8 +235,6 @@ header {
   line-height: 1.17;
   text-decoration: none;
   padding-top: 60px;
-  /*margin-right: 94px;
-  margin-bottom: 200px;*/
 }
 
 .studio-name-web {
@@ -261,36 +268,44 @@ header {
 }
 .team-name-item {
   background-color: var(--background-container-color);
-}
-.team-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.17;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-name,
 .team-position {
   text-align: center;
 }
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
 .team-position {
   font-size: 16px;
-  line-height: 1.17px;
+  line-height: 1.17;
   color: var(--third-text-color);
+
+  padding-bottom: 30px;
 }
 /*end team name*/
 
-.our-strengths-list {
+.lorem-list {
   display: flex;
   gap: 30px;
   text-align: left;
   justify-content: center;
   padding-left: 0;
+  padding-bottom: 94px;
 }
-.our-strenghts-title {
+.lorem-title {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.17;
 }
-.our-strenghts-description {
+.lorem-description {
   line-height: 1.71;
   color: var(--third-text-color);
   padding-top: 10px;
@@ -307,20 +322,20 @@ header {
 .what-we-do-list {
   display: flex;
   justify-content: center;
-  padding-left: 0px;
+  padding-left: 8px;
   gap: 30px;
-}
-.our-customers {
-  padding-left: 0;
-}
-.our-customer-item {
-  border: 1px solid #eee;
 }
 .our-customers-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   flex-basis: calc((100%-30px) / 3);
+}
+.about-client {
+  padding: 20px 0 24px 0;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
 }
 .client-name {
   font-weight: 700;
@@ -336,4 +351,15 @@ header {
   color: var(--third-text-color);
   text-align: left;
   padding: 0 24px 0 24px;
+}
+.bottom {
+  background-color: var(--background-footer-color);
+  text-decoration-line: none;
+  font-style: normal;
+  height: 252px;
+}
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
