@@ -322,7 +322,6 @@ header {
 .what-we-do-list {
   display: flex;
   justify-content: center;
-  padding-left: 8px;
   gap: 30px;
 }
 .our-customers-list {
