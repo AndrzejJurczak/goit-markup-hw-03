@@ -28,7 +28,6 @@ body {
   font-family: var(--main-font);
   background-color: var(--background-body-color);
   font-size: 14px;
-  font-weight: 400;
   letter-spacing: 0.03em;
 }
 h1,
@@ -77,8 +76,8 @@ header {
 .hero {
   background-color: var(--background-header-color);
   align-items: center;
-  height: 600px;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 .main-title {
   color: var(--secondary-text-color);
@@ -145,8 +144,7 @@ header {
   line-height: 1.36;
   color: var(--secondary-text-color);
   background-color: var(--button-color);
-  width: 200px;
-  height: 50px;
+  padding: 10px 40px;
   letter-spacing: 0.06em;
   border: rgba(255, 255, 255, 0.15);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -164,7 +162,7 @@ header {
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .button-portfolio-item {
   font-family: inherit;
@@ -189,8 +187,12 @@ header {
   line-height: 1.71;
 }
 .address {
-  padding-top: 20px;
+  margin-top: 20px;
 }
+.bottom-contact-item:nth-last-child(n + 1) {
+  margin-bottom: 9px;
+}
+
 .bottom-contact-address {
   line-height: 1.71;
   color: var(--secondary-text-color);
@@ -234,7 +236,6 @@ header {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  padding-top: 60px;
 }
 
 .studio-name-web {
@@ -257,14 +258,13 @@ header {
 .team-name-list {
   display: flex;
   justify-content: center;
-  padding-left: 0px;
   gap: 30px;
 }
 .team-name-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .team-name-item {
   background-color: var(--background-container-color);
@@ -280,35 +280,35 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.17;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-position {
   font-size: 16px;
   line-height: 1.17;
   color: var(--third-text-color);
-
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 /*end team name*/
-
+.lorem {
+  padding-bottom: 0px;
+}
 .lorem-list {
   display: flex;
   gap: 30px;
   text-align: left;
   justify-content: center;
-  padding-left: 0;
-  padding-bottom: 94px;
 }
 .lorem-title {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.17;
 }
 .lorem-description {
+  font-size: 14px;
   line-height: 1.71;
   color: var(--third-text-color);
-  padding-top: 10px;
+  margin-top: 10px;
   flex-wrap: nowrap;
   width: 270px;
 }
@@ -317,7 +317,7 @@ header {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .what-we-do-list {
   display: flex;
@@ -327,11 +327,10 @@ header {
 .our-customers-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  flex-basis: calc((100%-30px) / 3);
+  gap: 30px;
 }
 .about-client {
-  padding: 20px 0 24px 0;
+  padding: 20px 24px;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
@@ -342,23 +341,18 @@ header {
   line-height: 2;
   letter-spacing: 0.06em;
   text-align: left;
-  padding: 0 24px 4px 24px;
+  margin-bottom: 4px;
 }
 .client-service {
   font-size: 16px;
   line-height: 1.87;
   color: var(--third-text-color);
   text-align: left;
-  padding: 0 24px 0 24px;
 }
 .bottom {
   background-color: var(--background-footer-color);
-  text-decoration-line: none;
-  font-style: normal;
-  height: 252px;
 }
 .footer-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
