@@ -75,7 +75,6 @@ header {
 
 .hero {
   background-color: var(--background-header-color);
-  align-items: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -189,7 +188,7 @@ header {
 .address {
   margin-top: 20px;
 }
-.bottom-contact-item:nth-last-child(n + 1) {
+.bottom-contact-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -257,7 +256,6 @@ header {
 }
 .team-name-list {
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
 .team-name-title {
@@ -272,6 +270,10 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.team-describe {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-name,
 .team-position {
   text-align: center;
@@ -280,14 +282,12 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.17;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-position {
   font-size: 16px;
   line-height: 1.17;
   color: var(--third-text-color);
-  margin-bottom: 30px;
 }
 /*end team name*/
 .lorem {
@@ -351,8 +351,4 @@ header {
 }
 .bottom {
   background-color: var(--background-footer-color);
-}
-.footer-flex {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
